@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}
+About 
+{% endblock title %}
+
+{% block css %}
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+
+    html {
+        box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+    }
+
+    .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #fbe9d0;
+        color: #244855;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .title {
+        color: grey;
+    }
+
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #244855;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .button:hover {
+        background-color: #555;
+    }
+
+    @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+    }
+</style>
+{% endblock css %}
+
+{% block body %}
+<div class="about-section">
+    <h1>About Us</h1>
+    <p>Welcome to Thapar Health Centre, your trusted partner in healthcare and wellness located at Thapar Institute of Engineering and Technology in Patiala. Our facility is equipped with state-of-the-art medical technology and staffed by a team of dedicated healthcare professionals committed to providing exceptional medical services.</p>
+    <p>Dr. Mahesh Sharma, Faculty In-charge, T.I.E.T, Patiala.</p>
+    <h5>Our Mission is to enhance the health and well-being of our students, faculty, and staff through comprehensive medical care, preventive services, and wellness education.</h5>
+
+    <p><h5>Health Centre day timings are:</h5>
+    <li>Summer: 8:30 AM - 7:30 PM</li>
+    <li>Winter: 8:30 AM - 7:00 PM</li>
+    <li>Night Hours: 10:00 PM - 6:00 AM</li>
+    </p>
+    <p>Ambulance service available 24x7.</p>
+    <p>At Thapar Health Centre, we believe in a holistic approach to health and wellness. Our goal is to ensure that every member of the Thapar community has access to quality healthcare services in a welcoming and supportive environment.
+
+    For more information or to schedule an appointment, please contact us at +91 999-999-9999.</p>
+    
+</div>
+  
+<br>
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="{{ url_for('static', filename='ananya.jpg') }}" alt="Ananya" style="width:100%">
+            <div class="container">
+                <h2>Ananya Sharma</h2>
+                <p class="title">102106207</p>
+                <p>Third Year B.Tech ECE Student at Thapar Institute of Engineering and Technology, Patiala</p>
+                <p>asharma36_be21@thapar.edu</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{{ url_for('static', filename='paras.jpg') }}" alt="Paras" style="width:100%">
+            <div class="container">
+                <h2>Paras Sharma</h2>
+                <p class="title">102115015</p>
+                <p>Third Year B.Tech ENC Student at Thapar Institute of Engineering and Technology, Patiala</p>
+                <p>psharma3_be21@thapar.edu</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{{ url_for('static', filename='somya.jpg') }}" alt="Somya" style="width:100%">
+            <div class="container">
+                <h2>Somya Bhushan</h2>
+                <p class="title">102106224</p>
+                <p>Third Year B.Tech ECE Student at Thapar Institute of Engineering and Technology, Patiala</p>
+                <p>sbhushan_be21@thapar.edu</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
